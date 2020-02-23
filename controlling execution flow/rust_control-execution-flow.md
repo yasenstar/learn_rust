@@ -66,3 +66,15 @@ int main(int argc, char **argv) {
 }
 ```
 
+## Conditioned Loops (WHILE)
+
+Suppose you want to print the integer numbers from 1 to 10, including 1 and 10, squared, can be below way:
+
+```rust
+let mut i = 1;
+while i <= 10 {
+    print!("{} ", i * i);
+    i += 1;
+}
+```
+
