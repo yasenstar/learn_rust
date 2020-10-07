@@ -1,3 +1,5 @@
+// Chapter 06
+
 // Non-Decimal Numeric Bases
 /* fn main() {
     let hexadecimal = 0x1000;
@@ -10,7 +12,7 @@
 The numbers of this sample are expressed in different notations - 0x, 0o, 0b,
 but they are all of the same type: integer numbers. */
 
-// Underscore in Numeric Literals
+// Undeirscore in Numeric Literals
 // The underscore characters ("_") can be inserted in any literal number, even floating point, and they are ignored by the compiler.
 /* fn main() {
     let hexadecimal = 0x_00FF_F7A3;
@@ -46,8 +48,57 @@ but they are all of the same type: integer numbers. */
 // There is a need to specify an integer number type having a size dependent on the target, which is
 // a 32-bit integer if the target is a 32-bit system, and a 64-bit integer if the target is a 64-bit system.
 // To such purpose, Rust contains the "isize" type and the "usize" type:
+// fn main() {
+//     let arr = [11, 22, 33];
+//     let i: usize = 2;
+//     print!("{}", arr[i]);
+// }
+
+// fn main() {
+//     let i = 8;
+//     let j = 8_000_000_000;
+//     print!("{} {}", i, j);
+// }
+
+// Explicit Conversion
+// fn main() {
+//     let a: i16 = 12;
+//     let b: u32 = 4;
+//     let c: f32 = 3.9;
+//     print!("{}", a as i8 + b as i8 + c as i8);
+// }
+
 fn main() {
-    let arr = [11, 22, 33];
-    let i: usize = 2;
-    print!("{}", arr[i]);
+    let a = 500 as i8;
+    let b = 100_000 as u16;
+    let c = 10_000_000_000 as u32;
+    print!("{} {} {}", a, b, c);
 }
+
+// following are the error message:
+// error: literal out of range for `i8`
+//   --> primitive_types.rs:72:13
+//    |
+// 72 |     let a = 500 as i8;
+//    |             ^^^
+//    |
+//    = note: `#[deny(overflowing_literals)]` on by default
+//    = note: the literal `500` does not fit into the type `i8` whose range is `-128..=127`
+
+// error: literal out of range for `u16`
+//   --> primitive_types.rs:73:13
+//    |
+// 73 |     let b = 100_000 as u16;
+//    |             ^^^^^^^
+//    |
+//    = note: the literal `100_000` does not fit into the type `u16` whose range is `0..=65535`
+
+// error: literal out of range for `u32`
+//   --> primitive_types.rs:74:13
+//    |
+// 74 |     let c = 10_000_000_000 as u32;
+//    |             ^^^^^^^^^^^^^^
+//    |
+//    = note: the literal `10_000_000_000` does not fit into the type `u32` whose range is `0..=4294967295`
+
+// error: aborting due to 3 previous errors
