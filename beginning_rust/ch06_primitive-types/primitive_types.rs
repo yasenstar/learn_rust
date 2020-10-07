@@ -107,5 +107,36 @@ but they are all of the same type: integer numbers. */
 /*
 let _: i8 = 127;
 let _: i16 = 32_767;
-
+let _: i32 = 2_147_483_647;
+let _: i64 = 9_223_372_036_854_775_807;
+let _: isize = 100;
+let _: u8 = 255;
+let _: u16 = 65_535;
+let _: u32 = 4_294_967_295;
+let _: u64 = 18_446_744_073_709_551_615;
+let _: usize: 100;
+let _: f32: 1e38;
+let _: f64: ie308;
 */
+
+// Booleans and Characters
+/* fn main() {
+    let a: bool = true;
+    print!("[{}]", a);
+    let b: char = 'a';
+    print!("[{}] ", b);
+    print!("{} {} ", '亚' as u32, '森' as u32);
+    print!("{} {} {}", 224 as char, 165 as char, 64 as char);
+} */
+// "char" type: C vs. Rust
+// a C language char typically occupies only one byte, while an isolated Rust char occupies four bytes.
+// this is because the fact that Rust chars are Unicode characters.
+// note: literal characters are enclosed in SINGLE quotes, and they can be also non-ASCII characters.
+
+// All characters corresponding to the first 256 numbers:
+fn main() {
+    for i in 0..256 {
+        print!("{}: [{}], ", i, i as u8 as char);
+    }
+}
+
