@@ -35,4 +35,19 @@ but they are all of the same type: integer numbers. */
 } */
 
 // Various Kinds of Signed Integer Numbers in Rust Language
-// i8, i16, i32, i64: 8-bit / 16-bit / 32-bit / 64-bit signed integer number
+// i8, i16, i32, i64: 8-bit / 16-bit / 32-bit / 64-bit signed integer number, "i" is shorthand for "integer"
+
+// Unsigned Integer Number Types
+// u8, u16, u32, u64: 8-bit / 16-bit / 32-bit / 64-bit unsigned integer number, "u" is shorthand for "unsigned"
+
+// Target-Dependent Integer-Number Types
+// The index of an array or vector should be unsigned, and it should have the same size of a memory address
+// Now, Rust is not supported for 16-bit systems, but it's both for 32-bit and 64-bit systems.
+// There is a need to specify an integer number type having a size dependent on the target, which is
+// a 32-bit integer if the target is a 32-bit system, and a 64-bit integer if the target is a 64-bit system.
+// To such purpose, Rust contains the "isize" type and the "usize" type:
+fn main() {
+    let arr = [11, 22, 33];
+    let i: usize = 2;
+    print!("{}", arr[i]);
+}
