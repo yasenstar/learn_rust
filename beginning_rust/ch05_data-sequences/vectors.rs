@@ -28,9 +28,13 @@
 } */
 
 fn main() {
-    let length = 5000;
+    let length = 50;
     let mut y = vec![4.; length];
     y[6] = 3.1415;
     y.push(4.89);
-    print!("{}, {}, {}", y[6], y[4999], y[5000]);
+    println!("{}, {}, {}", y[6], y[49], y[50]);
+    println!("{:?}", y);
 }
+/* notice this "println!("{:?}, y);":
+when debugging the program, it is useful to use this to display the contents of structure, whout having to resort to "for" loop.
+*/
