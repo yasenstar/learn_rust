@@ -19,7 +19,8 @@ fn main() {
     while i < 100 {
         i += 1;
         if i % 3 == 0 {continue;}
-        if i * i > 4000 {break;}
+        if i * i > 5000 {break;}
         print!("{} ", i * i);
     }
+
 }
