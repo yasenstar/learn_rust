@@ -48,33 +48,33 @@ but they are all of the same type: integer numbers. */
 // There is a need to specify an integer number type having a size dependent on the target, which is
 // a 32-bit integer if the target is a 32-bit system, and a 64-bit integer if the target is a 64-bit system.
 // To such purpose, Rust contains the "isize" type and the "usize" type:
-// fn main() {
 //     let arr = [11, 22, 33];
 //     let i: usize = 2;
 //     print!("{}", arr[i]);
 // }
 
 // fn main() {
-//     let i = 8;
-//     let j = 8_000_000_000;
-//     print!("{} {}", i, j);
-// }
-
-// Explicit Conversion
-// fn main() {
-//     let a: i16 = 12;
-//     let b: u32 = 4;
-//     let c: f32 = 3.9;
-//     print!("{}", a as i8 + b as i8 + c as i8);
-// }
-
-fn main() {
-    let a = 500 as i8;
-    let b = 100_000 as u16;
-    let c = 10_000_000_000 as u32;
-    print!("{} {} {}", a, b, c);
-}
-
+    //     let i = 8;
+    //     let j = 8_000_000_000;
+    //     print!("{} {}", i, j);
+    // }
+    
+    // Explicit Conversion
+    // fn main() {
+        //     let a: i16 = 12;
+        //     let b: u32 = 4;
+        //     let c: f32 = 3.9;
+        //     print!("{}", a as i8 + b as i8 + c as i8);
+        // }
+        
+/*         fn main() {
+            let a = 500 as i8;
+            let b = 100_000 as u16;
+            let c = 10_000_000_000 as u32;
+            print!("{} {} {}", a, b, c);
+        } */
+        
+        // fn main() {
 // following are the error message:
 // error: literal out of range for `i8`
 //   --> primitive_types.rs:72:13
@@ -82,12 +82,12 @@ fn main() {
 // 72 |     let a = 500 as i8;
 //    |             ^^^
 //    |
-//    = note: `#[deny(overflowing_literals)]` on by default
 //    = note: the literal `500` does not fit into the type `i8` whose range is `-128..=127`
 
 // error: literal out of range for `u16`
 //   --> primitive_types.rs:73:13
 //    |
+//    = note: `#[deny(overflowing_literals)]` on by default
 // 73 |     let b = 100_000 as u16;
 //    |             ^^^^^^^
 //    |
@@ -102,3 +102,10 @@ fn main() {
 //    = note: the literal `10_000_000_000` does not fit into the type `u32` whose range is `0..=4294967295`
 
 // error: aborting due to 3 previous errors
+
+// all the Numeric Types
+/*
+let _: i8 = 127;
+let _: i16 = 32_767;
+
+*/
