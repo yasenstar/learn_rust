@@ -22,8 +22,8 @@ The relational operators for boolean are the following ones:
 - !=: is different from (not equal to)
 - <: is less than
 - <=: is less than or equal to
-- >: is greater than
-- >=: is greater than or equal to
+- \>: is greater than
+- \>=: is greater than or equal to
 
 Boolean expressions:
 
