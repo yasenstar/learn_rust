@@ -53,14 +53,14 @@ for the whole loop, and it would become valid again after the loop, as shown in 
 */
 
 // limits with expressions
-/* fn main() {
+fn main() {
     let mut limit = 10;
     for i in 1..limit {
         limit -= 1;
         println!("i={}, limit={}", i, limit);
     }
     println!(": {}", limit);
-} */
+}
 /* explanation:
 First, the limit variables is created, and it is initialized to the 10 value.
 Then, the extremes of the loop are evaluated. The extreme, included, is 1, while the final extreme, excluded is 10.
