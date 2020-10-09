@@ -53,3 +53,16 @@ fn main() {
 
 This code generates result printing `232`.
 
+## Passing Arguments by Values vs. Reference
+
+| by value | by reference | Memo |
+| --- | --- | --- |
+| fn double_negatives(mut a: [i32; 10]) -> [32; 10] { | fn double_negatives (a: &mut [i32;10]) { | note: reference have "&" before mut, and not need return type |
+| for i in 0..10 { | for i in 0..10 { | same |
+| if a[i] < 0 { a[i] *= 2;} | if (*a)[i] < 0 { (*a)[i] *= 2; } | using "*" before variable to indicate that's one reference |
+| } | } | |
+| } | } | |
+| let mut arr = [5, -4, 9, 0, -7, -1, 3, 5, 3, -1]; | let mut arr = [5, -4, 9, 0, -7, -1, 3, 5, 3, -1]; | same |
+| arr = double_negatives(arr); | double_negatives(&mut arr); | need "&" to indicate reference, and no need put function result to variable again |
+| print!("{:?}", arr); } | print!("{:?}", arr); } | same |
+
