@@ -18,7 +18,7 @@ fn main() {
 } */
 
 // rewrite the function in the top
-fn main() {
+/* fn main() {
     let a = 5.;
     let b = 4.;
     add_number(a,b);
@@ -26,5 +26,15 @@ fn main() {
     fn add_number(x: f64, y: f64) {
         println!("{} + {} = {}", x, y, x+y);
     }
-}
+} */
 // it's working, with result "5 + 4 = 9", need to understand how to use "return"
+
+// rewrite with returning a value
+fn main() {
+    fn add_number(x: f64, y: f64) -> f64 {
+        x + y;
+    }
+    let a = 5.;
+    let b = 4.;
+    println!("{} + {} = {}", a, b, add_number(a, b));
+}
