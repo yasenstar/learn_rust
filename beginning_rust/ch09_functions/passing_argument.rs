@@ -71,7 +71,7 @@
     println!("{:?}", arr);
 } */
 // using function:
-fn main() {
+/* fn main() {
     fn double_negatives(mut a: [i32; 9]) -> [i32; 9] {
         for i in 0..9 {
             if a[i] < 0 { a[i] *= 2; }
@@ -81,4 +81,8 @@ fn main() {
     let mut arr = [ 5, -4, -9, 7, -1, 4, -8, -3, 2];
     arr = double_negatives(arr);
     println!("{:?}", arr);
-}
+} */
+
+// 2020-10-09
+// Passing arguments by reference, means only pass the address instead of full value to a function
+
