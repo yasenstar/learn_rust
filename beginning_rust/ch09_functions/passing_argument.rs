@@ -112,10 +112,26 @@
 
 // using reference
 
-fn main() {
+/* fn main() {
     let a = 15;
     let ref_a = &a;
     println!("{} {} {}", a, *ref_a, ref_a);
     let a = &&&7;
     println!("{} {} {} {}", ***a, **a, *a, a);
+} */
+
+// mutability of reference
+
+fn main() {
+    let mut a: i32 = 10;
+    let mut b: i32 = 20;
+    let mut p: &mut i32 = &mut a;
+    print!("{} ", *p);
+    *p += 1;
+    print!("{} ", *p);
+    p = &mut b;
+    print!("{} ", *p);
+    *p += 1;
+    print!("{} ", *p);
 }
+
