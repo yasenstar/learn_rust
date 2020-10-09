@@ -86,7 +86,7 @@
 // 2020-10-09
 // Passing arguments by reference, means only pass the address instead of full value to a function
 
-fn main() {
+/* fn main() {
     fn double_negatives(a: &mut [i32; 10]) {
         for i in 0..10 {
             if (*a)[i] < 0 { (*a)[i] *= 2; }
@@ -95,4 +95,27 @@ fn main() {
     let mut arr = [ 5, -4, -9, 7, -1, 4, -8, -3, 2, -1];
     double_negatives(&mut arr);
     println!("{:?}", arr);
+} */
+
+// making simplify, but it's not legal of using a[i] directly instead of (*a)[i]
+
+/* fn main() {
+    fn double_negatives(a: &mut [i32; 10]) {
+        for i in 0..10 {
+            if a[i] < 0 { ( a[i] *= 2; }
+        }
+    }
+    let mut arr = [ 5, -4, -9, 7, -1, 4, -8, -3, 2, -1];
+    double_negatives(&mut arr);
+    println!("{:?}", arr);
+} */
+
+// using reference
+
+fn main() {
+    let a = 15;
+    let ref_a = &a;
+    println!("{} {} {}", a, *ref_a, ref_a);
+    let a = &&&7;
+    println!("{} {} {} {}", ***a, **a, *a, a);
 }
