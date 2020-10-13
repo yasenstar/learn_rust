@@ -1,0 +1,11 @@
+[package]
+name = "hello_cargo"
+version = "0.1.0"
+authors = ["Yasen Zhao <xiaoqizhao@outlook.com>"]
+edition = "2018"
+
+# TOML - Tome's Obvious, Minimal Language
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]

@@ -1,0 +1,1 @@
+/Users/yasen/Documents/GitHub/learn_rust/the_rust_lang/ch01_getting-started/hello_cargo/target/debug/hello_cargo: /Users/yasen/Documents/GitHub/learn_rust/the_rust_lang/ch01_getting-started/hello_cargo/src/main.rs
